@@ -7,7 +7,6 @@ package dextreebuilder;
 
 import dex.*;
 import dex.io.*;
-import dextreebuilder.Constants;
 import dex.io.instructions.DecodedInstruction;
 import java.io.File;
 import java.io.IOException;
@@ -77,7 +76,7 @@ public class DexTreeBuilder {
                                         || (opcode >= Constants.CALL_VIRTUAL_R
                                         && opcode <= Constants.CALL_INTERFACE_R)) {
 //                                    System.out.println(OpcodeInfo.getName(inst.getOpcode()));
-                                    System.out.println("\t\t" + dex.strings().get(dex.nameIndexFromMethodIndex(inst.getIndex())));
+                                    System.out.println("\t\t" + dex.methodIds().get(inst.getIndex()) +dex.strings().get(dex.nameIndexFromMethodIndex(inst.getIndex())));
 //                                    System.out.println(dex.methodIds().get(inst.getIndex()));
                                 }
                             }
